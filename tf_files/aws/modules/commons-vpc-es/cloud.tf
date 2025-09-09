@@ -89,9 +89,9 @@ resource "aws_elasticsearch_domain" "gen3_metadata" {
     enabled = "true"
   }
 
-  advanced_options {
-    rest.action.multi.allow_explicit_index = "true"
-  }
+  #advanced_options {
+  #  rest.action.multi.allow_explicit_index = "true"
+  #}
 
   snapshot_options {
     automated_snapshot_start_hour = 23

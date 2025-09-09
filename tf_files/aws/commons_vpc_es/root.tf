@@ -4,7 +4,7 @@ terraform {
   }
 }
 
-provider "aws" {}
+#xprovider "aws" {}
 
 
 module "commons_vpc_es" {
@@ -20,4 +20,3 @@ module "commons_vpc_es" {
   es_version              = "${var.es_version}"
   es_linked_role          = "${var.es_linked_role}"
 }
-

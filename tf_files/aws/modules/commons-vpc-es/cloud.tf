@@ -73,7 +73,7 @@ resource "aws_elasticsearch_domain" "gen3_metadata" {
   }
   vpc_options {
     security_group_ids = ["${aws_security_group.private_es.id}"]
-    subnet_ids = ["${data.aws_subnet_ids.private.ids}"]
+    subnet_ids = ["${data.aws_subnets.private.ids}"]
   }
   cluster_config {
     instance_type = "${var.instance_type}"

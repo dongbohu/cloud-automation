@@ -16,7 +16,8 @@ resource "aws_iam_service_linked_role" "es" {
 resource "aws_security_group" "private_es" {
   name        = "private_es"
   description = "security group that allow es port out"
-  vpc_id      = "${element(data.aws_vpcs.vpcs.ids, count.index)}"
+  #vpc_id      = "${element(data.aws_vpcs.vpcs.ids, count.index)}"
+  vpc_id      = "${element(data.aws_vpcs.vpcs.ids, 0)}"
 
   ingress {
     from_port   = 0
